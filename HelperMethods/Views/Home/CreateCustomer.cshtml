@@ -1,0 +1,145 @@
+﻿
+@model HelperMethods.Models.Customer
+
+@{
+    ViewBag.Title = "CreatePerson";
+    Layout = null;
+}
+
+<style>
+    body {
+        padding: 2em;
+    }
+</style>
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<h2>Create customer</h2>
+
+<form action="/Home/CreateCustomer" method="post">
+        <div class="form-group">
+            <label>Customer Id</label>
+            <input name="PersonId" class="form-control" value="@Model.PersonId" />
+        </div>
+        <div class="form-group">
+            <label>First Name</label>
+            <input name="FirstName" class="form-control" value="@Model.FirstName" />
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            <input name="lastName" class="form-control" value="@Model.LastName" />
+        </div>
+        <input type="submit" class="btn btn-primary" value="Submit" />
+    </form>
+
+
+@*@using (Html.BeginForm())
+    {
+        <div class="form-group">
+            <label>Customer Id</label>
+            <input name="PersonId" class="form-control" value="@Model.PersonId" />
+        </div>
+        <div class="form-group">
+            <label>First Name</label>
+            <input name="FirstName" class="form-control" value="@Model.FirstName" />
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            <input name="lastName" class="form-control" value="@Model.LastName" />
+        </div>
+        <input type="submit" class="btn btn-primary" value="Submit" />
+    }*@
+
+
+@*@using (Html.BeginRouteForm("MyFormRoute"))
+    {
+        <div class="form-group">
+            <label>Customer Id</label>
+            <input name="PersonId" class="form-control" value="@Model.PersonId" />
+        </div>
+        <div class="form-group">
+            <label>First Name</label>
+            <input name="FirstName" class="form-control" value="@Model.FirstName" />
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            <input name="lastName" class="form-control" value="@Model.LastName" />
+        </div>
+        <input type="submit" class="btn btn-primary" value="Submit" />
+    }*@
+
+
+
+@*@using (Html.BeginForm())
+    {
+        <div class="form-group">
+            <label>Customer Id</label>
+            @Html.TextBox("personId", @Model.PersonId, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>First Name</label>
+            @Html.TextBox("firstName", @Model.FirstName, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            @Html.TextBox("lastName", @Model.LastName, new { @class = "form-control" })
+        </div>
+        <input type="submit" class="btn btn-primary" value="Submit" />
+    }*@
+
+@*@using (Html.BeginForm())
+    {
+        <div class="form-group">
+            <label>Customer Id</label>
+            @Html.TextBox("personId", null, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>First Name</label>
+            @Html.TextBox("firstName", null, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            @Html.TextBox("lastName", null, new { @class = "form-control" })
+        </div>
+        <input type="submit" class="btn btn-primary" value="Submit" />
+    }*@
+
+@*@using (Html.BeginForm())
+    {
+        <div class="form-group">
+            <label>Customer Id</label>
+            @Html.TextBoxFor(x => x.PersonId, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>First Name</label>
+            @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            @Html.TextBoxFor(x => x.LastName, new { @class = "form-control" })
+        </div>
+        <input type="submit" class="btn btn-primary" value="Submit" />
+    }*@
+
+@*@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <label>Customer Id</label>
+        @Html.TextBoxFor(x => x.PersonId, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>First Name</label>
+        @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        @Html.TextBoxFor(x => x.LastName, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Role</label>
+        @Html.DropDownListFor(x => x.Role, new SelectList(
+       Enum.GetNames(typeof(HelperMethods.Models.Role))), 
+       new { @class = "form-control" })
+    </div>
+    <input type="submit" class="btn btn-primary" value="Submit" />
+}*@
